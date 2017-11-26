@@ -1,16 +1,19 @@
 # Introduction
- * Applications
- * Not familiar with circuits
- * Couldn't find clear instructions
- * The guide I wish I had
+I am building a robot using one of my Raspberry Pi 2s. I bought a chasis that came with wheels and 4 motors. Figuring out how to control the motors seemed unnecessasrily difficult to figure out. I am not terribly familiar with electronic circuits and chips. 
+
+I quickly learned that I need to master using the L239D chip to succeed. This is because a microcontroller cannot provide enough power to a motor for such an application directly. You need to use a separate battery back, and use the microcontroller to determine if and how the motor gets power from the batter. The L239D is a very popular chip for doing just that.
+
+It took me too much trial and error to figure out how to use the L239D chip. So, I wrote this guide as the guide that I wish I had when I was learning how to set up my robot.
 
 # Parts
- * Breadboard
- * Computer (Arduino)
- * Battery Pack
- * Jumper Cables
- * L293D Chip
- * Motor
+To write this guide, I assembled the following components I had handy.
+
+ 1. Breadboard - For learning the wiring, a standard divided breadboard is easiest.
+ 2. Microcontroller - I used my Arduino clone from Sparkfun. It is the simplest to set up. Any microntroller like a Pi or BeagleBone will do just fine, though.
+ 3. Battery Pack - A 9 volt battery is fine. I happened to have a 4xAA battery holder handy, so I used that. 
+ 4. Jumper Cables - I strongly prefer to use red for negative, black for positive, and other colors for digital connections. Of course, use what you have handy.
+ 5. L293D Chip - I ordered 10 of them from Amazon for about $9.
+ 6. Motor - I had a small motor from my Sparkfun inventors kit handy. The motors for my robot are much more powerful, but this one was fine for the guide.
 
 ![all items](Photos/parts.jpg)
 
@@ -109,6 +112,11 @@ void loop() {
 }
 ```
 
+# Next Steps
+Note that you only used one side of the L239D. There are 2 more inputs and outputs (pins 15/14 and pins 10/11). That means that you can use the same L239D to control another motor. In my application, I use 2 L239Ds to control 4 wheels of my robot independently. 
 
+!(2 l239ds can control 4 wheels)[Photos/2l239ds.jpg)
+
+!(Showing off)[Photos/robot.jpg]
 
 
