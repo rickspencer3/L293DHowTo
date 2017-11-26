@@ -14,9 +14,6 @@
 
 ![all items](Photos/parts.jpg)
 
-
-
-
 # Overview
 1 - a port for powering the chip itself
 2 - grounding the chip itself
@@ -24,6 +21,9 @@
 4. 4 input ports
  - one for postive, one for negative on each side
 5. pwm control, not covered
+
+
+![Useful diagram](https://i2.wp.com/robotin.net/wp-content/uploads/2011/07/L293D-pin-out.gif)
 
 ![The notch is the "front"](Photos/orientation.jpg)
 
@@ -39,10 +39,12 @@ I prefer to use red jumpers for positive power, and black for ground. After this
 
 ## Connect the 5v Output
 Use a red jumper to connect the 5v of your microcontroller to the power strip of the breadboard. 
+
 !(Connect the 5v to the breadboard)[Photos/5v-breadboard.jpg)
 
 ## Ground the Breadboard
 Next, ground the breadboard. This ground will be used by everything plugged into the L293D. Use a black jumper to connect the ground on the breadboard to the ground on your microcontroller.
+
 !(Ground the breadboard)[Photos/ground-breadboard.jpg)
 
 ## Complete the Power Circuit for the L293D
@@ -62,7 +64,7 @@ Plug the red lead from the battery pack in the breadboards other positive channe
 
 Then connect the black lead from the battery into the ground channel from the other side. This will just use the existing ground on the microcontroller.
 
-!(Connect the ground lead from the battery to the ground channel(Photos/battery-circuit.jpg)
+![Connect the ground lead from the battery to the ground channel](Photos/battery-circuit.jpg)
 
 
 
