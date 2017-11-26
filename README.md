@@ -43,12 +43,12 @@ I prefer to use red jumpers for positive power, and black for ground. After this
 ## Connect the 5v Output
 Use a red jumper to connect the 5v of your microcontroller to the power strip of the breadboard. 
 
-!(Connect the 5v to the breadboard)[Photos/5v-breadboard.jpg)
+![Connect the 5v to the breadboard](Photos/5v-breadboard.jpg)
 
 ## Ground the Breadboard
 Next, ground the breadboard. This ground will be used by everything plugged into the L293D. Use a black jumper to connect the ground on the breadboard to the ground on your microcontroller.
 
-!(Ground the breadboard)[Photos/ground-breadboard.jpg)
+![Ground the breadboard](Photos/ground-breadboard.jpg)
 
 ## Complete the Power Circuit for the L293D
 Now that the breadboard is set up, you can complete the circuit to the L293D.
@@ -115,8 +115,7 @@ void loop() {
 # Next Steps
 Note that you only used one side of the L239D. There are 2 more inputs and outputs (pins 15/14 and pins 10/11). That means that you can use the same L239D to control another motor. In my application, I use 2 L239Ds to control 4 wheels of my robot independently. 
 
-!(2 l239ds can control 4 wheels)[Photos/2l239ds.jpg)
+![2 l239ds can control 4 wheels](Photos/2l239ds.jpg)
 
-!(Showing off)[Photos/robot.jpg]
-
+![Showing off](Photos/robot.jpg)
 
