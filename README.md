@@ -66,5 +66,21 @@ Then connect the black lead from the battery into the ground channel from the ot
 
 ![Connect the ground lead from the battery to the ground channel](Photos/battery-circuit.jpg)
 
+# Connect the Digital Pins
+In this application, the motor is controller by digital pins that can be either on or off (usually called GPIO) pins. By connecting digital pins to the L239D, you can tell the L239D to allow electricity to flow through the motors red positive lead, or black negative lead. If the batter power flows through the red lead, the motor will go forward, if through the black lead, it will go backward. If electricity goes through either or both, the motor will not move. In this way, you need two inputs to fully control the direction of the motor.
+
+I chose pins 7 and 4 on the Arduino due to their convenient placement. Use a jumper that is not black or red for each digital pin that you choose. 
+
+![Connect the digital pins](Photos/digital-pins.jpg)
+
+Then connect them to the L239D inputs, but connecting them to pins 2 and 7. These are the 2 "input" pins on this side of L239D.
+
+![Connect the inputs pins 2 and 7 on the L239D](Photos/inputs.jpg)
+
+The L239D is now ready to receive commands.
+
+
+
+
 
 
