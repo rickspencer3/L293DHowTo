@@ -14,10 +14,6 @@
 
 ![all items](Photos/parts.jpg)
 
-# Install on Breadboard
- * Notch is the front
-![The notch is the "front"](Photos/orientation.jpg)
-  * Divide if available
 
 
 
@@ -29,7 +25,12 @@
  - one for postive, one for negative on each side
 5. pwm control, not covered
 
-point to diagram
+![The notch is the "front"](Photos/orientation.jpg)
+
+# Install on Breadboard
+ * Notch is the front
+ * Divide if available
+
 
 # Power the L293D
 The chip itself needs power to run. This is separate from the power that will go the motor, and separate from the digital output to command whether to give juice to the motor. Your microcontrol almost certainly has a 5v out that is perfect for this. On the Arduino, it is conveniently labeled "5V."
@@ -51,6 +52,5 @@ Now that the breadboard is set up, you can complete the circuit to the L293D.
 
 !(Complete the circuit for the L239D)[Photos/5v-circuit.jpg)
 
-
-
 # Power the Motor
+
