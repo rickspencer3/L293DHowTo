@@ -12,7 +12,7 @@
  * L293D Chip
  * Motor
 
-[all items](Photos/parts.jpg)
+![all items](Photos/parts.jpg)
 Pic with parts
 
 # Install on Breadboard
