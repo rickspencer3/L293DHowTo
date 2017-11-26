@@ -79,7 +79,35 @@ Then connect them to the L239D inputs, but connecting them to pins 2 and 7. Thes
 
 The L239D is now ready to receive commands.
 
+# Connect the Motor
+This is the last step in creating the cirtuits. You simply need to pair the red and black leads from the motor with the digital pin inputs, by connecting them to pins 3 and 6 on the L239D. This pairs them with the inputs on pin 2 and 7.
 
+![Connect the motor to pins 3 and 6](Photos/motor-connected.jpg)
+
+# Control with the Microcontroller
+Now you can control the direction of the motor with the microcontroller. Here is an Arduino sketch that causes the motor to spin in one direction for 1 second. Then rests for a second, then spins the other way, and then rests, and so forth.
+
+```
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(4, OUTPUT);
+  pinMode(7, OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(4, HIGH);
+  digitalWrite(7, LOW);
+  delay(1000);
+  digitalWrite(4, LOW);
+  digitalWrite(7, LOW);
+  delay(1000);
+  digitalWrite(4, LOW);
+  digitalWrite(7, HIGH);
+  delay(1000);
+}
+```
 
 
 
