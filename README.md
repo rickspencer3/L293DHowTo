@@ -115,7 +115,7 @@ void loop() {
 # Next Steps
 Note that you only used one side of the L239D. There are 2 more inputs and outputs (pins 15/14 and pins 10/11). That means that you can use the same L239D to control another motor. In my application, I use 2 L239Ds to control 4 wheels of my robot independently. 
 
-![2 l239ds can control 4 wheels](Photos/2l239ds.jpg)
+![2 l239ds can control 4 wheels](Photos/2-l239ds.jpg)
 
 ![Showing off](Photos/robot.jpg)
 
