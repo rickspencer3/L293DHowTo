@@ -50,7 +50,19 @@ Now that the breadboard is set up, you can complete the circuit to the L293D.
 1. Use a red jumper cable to connect pin 16 to the positive power channel in the breadboard.
 2. Use a black jumper to connect pin 13 to the negative channel in the breadboard.
 
-!(Complete the circuit for the L239D)[Photos/5v-circuit.jpg)
 
-# Power the Motor
+![Complete the circuit for the L239D](Photos/5v-circuit.jpg)
+
+# Create the Circuit for the Battery
+Next we will provide power for motor. The battery pack will provide the power to the motor (when commanded by the microcontroller). After this step, the batter will be wired up, but the motor still won't be connected, nor will the commands from the microcontroller.
+
+Plug the red lead from the battery pack in the breadboards other positive channel. Then use a red jumper cable to connect from the positive channel to pin 8 on the L239D. This provides the power from the battery that will be used to control the motor.
+
+![Connect the positive lead from the battery to pin 8](Photos/battery-in.jpg)
+
+Then connect the black lead from the battery into the ground channel from the other side. This will just use the existing ground on the microcontroller.
+
+!(Connect the ground lead from the battery to the ground channel(Photos/battery-circuit.jpg)
+
+
 
