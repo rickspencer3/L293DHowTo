@@ -22,6 +22,8 @@ There are many useful diagrams of the chip on the web, such as this:
 
 ![Useful diagram](https://i2.wp.com/robotin.net/wp-content/uploads/2011/07/L293D-pin-out.gif)
 
+However, I had to piece together information from many sources before I could get a very clear idea of how the chip is intended to be used. 
+
 Note the direction on which the pins are numbered. The functionality and relationship of each pin is not always very clear. Refer to the number photo below.
 
 ![The notch is the "front"](Photos/orientation.jpg)
@@ -76,7 +78,9 @@ You can additionally set how fast the motor goes by sending a signal to the PWM 
 # Power the L293D
 The chip itself needs power to run. This is separate from the power that will go the motor, and separate from the digital output to command whether to give juice to the motor. Your microcontrol almost certainly has a 5v out that is perfect for this. On the Arduino, it is conveniently labeled "5V."
 
-I prefer to use red jumpers for positive power, and black for ground. After this step, your L29D will have the power it needs to run its logic.
+I prefer to use red jumpers for positive power, and black for negative/ground. After this step, your L29D will have the power it needs to run its logic.
+
+![diagram of powered chip](Diagrams/chip-power.png)
 
 ## Connect the 5v Output
 Use a red jumper to connect the 5v of your microcontroller to the power strip of the breadboard. 
@@ -99,6 +103,8 @@ Now that the breadboard is set up, you can complete the circuit to the L293D.
 # Create the Circuit for the Battery
 Next we will provide power for motor. The battery pack will provide the power to the motor (when commanded by the microcontroller). After this step, the batter will be wired up, but the motor still won't be connected, nor will the commands from the microcontroller.
 
+![diagram of connected batter](Diagrams/battery-power.png)
+
 Plug the red lead from the battery pack in the breadboards other positive channel. Then use a red jumper cable to connect from the positive channel to pin 8 on the L239D. This provides the power from the battery that will be used to control the motor.
 
 ![Connect the positive lead from the battery to pin 8](Photos/battery-in.jpg)
@@ -108,6 +114,10 @@ Then connect the black lead from the battery into the ground channel from the ot
 ![Connect the ground lead from the battery to the ground channel](Photos/battery-circuit.jpg)
 
 # Connect the Digital Pins
+In this step, you will connect the digital pins from the microcontroller to the chip.
+
+![diagram of connected GPIO pins](Diagrams/digital-pins.png)
+
 In this application, the motor is controller by digital pins that can be either on or off (usually called GPIO) pins. By connecting digital pins to the L239D, you can tell the L239D to allow electricity to flow through the motors red positive lead, or black negative lead. If the batter power flows through the red lead, the motor will go forward, if through the black lead, it will go backward. If electricity goes through either or both, the motor will not move. In this way, you need two inputs to fully control the direction of the motor.
 
 I chose pins 7 and 4 on the Arduino due to their convenient placement. Use a jumper that is not black or red for each digital pin that you choose. 
@@ -121,6 +131,11 @@ Then connect them to the L239D inputs, but connecting them to pins 2 and 7. Thes
 The L239D is now ready to receive commands.
 
 # Connect the Motor
+In this final step, you will create the circuit for the motor.
+
+![full diagram](Diagrams/connect-motor.png)
+
+
 This is the last step in creating the cirtuits. You simply need to pair the red and black leads from the motor with the digital pin inputs, by connecting them to pins 3 and 6 on the L239D. This pairs them with the inputs on pin 2 and 7.
 
 ![Connect the motor to pins 3 and 6](Photos/motor-connected.jpg)
